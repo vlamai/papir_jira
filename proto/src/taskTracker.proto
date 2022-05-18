@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package taskTracker;
+
+option go_package = "proto/pb";
+
+service TaskTracker{
+  rpc GetTaskName(GetTaskNameRequest) returns (GetTaskNameResponse) {}
+}
+
+message GetTaskNameRequest{
+  string TaskId = 1;
+}
+
+message GetTaskNameResponse{
+  string TaskName = 1;
+}
